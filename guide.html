@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>User Guide – US Address Verify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">📍</span>
+                <span class="logo-text">US Address Verify</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="guide.html" class="active">Guide</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="https://marketplace.zoho.com/app/preview/crm/us-address-verify-for-zoho-crm" target="_blank" class="btn-primary btn-small">Get Started</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>User Guide</h1>
+            <p>Complete documentation for US Address Verify for Zoho CRM</p>
+        </div>
+    </section>
+
+    <!-- ===== GUIDE CONTENT ===== -->
+    <section class="guide-content">
+        <div class="container guide-grid">
+            <aside class="guide-sidebar">
+                <h4>Contents</h4>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#setup">Setup & Configuration</a></li>
+                    <li><a href="#custom-fields">Custom Fields</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+            </aside>
+
+            <main class="guide-main">
+                <!-- Overview -->
+                <section id="overview">
+                    <h2>📊 Executive Summary</h2>
+                    <p><strong>US Address Verify for Zoho CRM</strong> automatically validates and verifies US addresses in your Leads, Contacts, and Accounts modules.</p>
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <strong>✅ Improve Data Quality</strong>
+                            <p>Ensure all addresses are accurate and deliverable</p>
+                        </div>
+                        <div class="benefit">
+                            <strong>✅ Reduce Failed Deliveries</strong>
+                            <p>Catch invalid addresses before they cause problems</p>
+                        </div>
+                        <div class="benefit">
+                            <strong>✅ Save Time</strong>
+                            <p>Automate address verification instead of manual checking</p>
+                        </div>
+                        <div class="benefit">
+                            <strong>✅ Gain Insights</strong>
+                            <p>Get county, coordinates, and time zone data for every address</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Features -->
+                <section id="features">
+                    <h2>🚀 Key Features</h2>
+
+                    <h3>1. Smart Address Verification</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Status</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="status-valid">Valid</span></td><td>Address is verified and deliverable</td></tr>
+                            <tr><td><span class="status-invalid">Invalid</span></td><td>Address could not be verified</td></tr>
+                            <tr><td><span class="status-outside">Outside US</span></td><td>Address is outside the United States</td></tr>
+                            <tr><td><span class="status-missing">Missing</span></td><td>Address information is incomplete</td></tr>
+                            <tr><td><span class="status-not-checked">Not Checked</span></td><td>Address has not been verified yet</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>2. Enriched Address Data</h3>
+                    <ul>
+                        <li><strong>County</strong> – County name where the address is located</li>
+                        <li><strong>County FIPS</strong> – Unique 5-digit code for the county</li>
+                        <li><strong>State FIPS</strong> – 2-digit code for the state</li>
+                        <li><strong>Latitude</strong> – Geographic latitude coordinate</li>
+                        <li><strong>Longitude</strong> – Geographic longitude coordinate</li>
+                        <li><strong>Time Zone</strong> – Time zone of the location</li>
+                        <li><strong>Verified Address</strong> – Standardized, postal-approved address</li>
+                    </ul>
+
+                    <h3>3. Multi-Module Support</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Module</th><th>Address Type</th><th>Verification</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Leads</td><td>Single Address</td><td>✅ Full Verification</td></tr>
+                            <tr><td>Contacts</td><td>Single Address</td><td>✅ Full Verification</td></tr>
+                            <tr><td>Accounts</td><td>Billing & Shipping</td><td>✅ Full Verification</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Installation -->
+                <section id="installation">
+                    <h2>📥 Installation Guide</h2>
+
+                    <h3>Step 1: Install the Extension</h3>
+                    <ol>
+                        <li>Go to <strong>Zoho Marketplace</strong></li>
+                        <li>Search for <strong>"US Address Verify"</strong></li>
+                        <li>Click <strong>Install</strong></li>
+                        <li>Follow the installation wizard</li>
+                        <li>Grant necessary permissions</li>
+                    </ol>
+
+                    <h3>Step 2: Set Up Workflow Rules</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Module</th><th>Workflow Name</th><th>Trigger</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Leads</td><td>Auto Verify Lead Address</td><td>On Create / On Edit</td></tr>
+                            <tr><td>Contacts</td><td>Auto Verify Contact Address</td><td>On Create / On Edit</td></tr>
+                            <tr><td>Accounts</td><td>Auto Verify Account Addresses</td><td>On Create / On Edit</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Step 3: Add Related Lists</h3>
+                    <ol>
+                        <li>Go to <strong>Setup</strong> > <strong>Customization</strong> > <strong>Modules and Fields</strong></li>
+                        <li>Select each module (Leads, Contacts, Accounts)</li>
+                        <li>Click <strong>Layouts</strong> tab</li>
+                        <li>Add the <strong>Address Validation</strong> Related List</li>
+                    </ol>
+
+                    <h3>Step 4: Add Custom Buttons</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Module</th><th>Button Label</th><th>Function Name</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Leads</td><td>Verify Address</td><td>LeadsUSAddressVerifyButton</td></tr>
+                            <tr><td>Contacts</td><td>Verify Address</td><td>ContactsUSAddressVerifyButton</td></tr>
+                            <tr><td>Accounts</td><td>Verify Address</td><td>AccountsUSAddressVerifyButton</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Custom Fields -->
+                <section id="custom-fields">
+                    <h2>📦 Custom Fields Created</h2>
+
+                    <h3>For Leads & Contacts:</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Field Name</th><th>Purpose</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Full Address Status</td><td>Valid / Invalid / Outside US / Missing</td></tr>
+                            <tr><td>County</td><td>County name from the address</td></tr>
+                            <tr><td>County FIPS</td><td>5-digit county code</td></tr>
+                            <tr><td>State FIPS</td><td>2-digit state code</td></tr>
+                            <tr><td>Address Details</td><td>Complete verification report</td></tr>
+                            <tr><td>Verified Address</td><td>Standardized, postal-approved address</td></tr>
+                            <tr><td>Verified ZIP</td><td>Standardized 5-digit ZIP code</td></tr>
+                            <tr><td>Latitude</td><td>Geographic coordinate</td></tr>
+                            <tr><td>Longitude</td><td>Geographic coordinate</td></tr>
+                            <tr><td>Time Zone</td><td>Time zone of the location</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>For Accounts Only:</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Field Name</th><th>Purpose</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Shipping Address Status</td><td>Status of shipping address</td></tr>
+                            <tr><td>Shipping County</td><td>County for shipping address</td></tr>
+                            <tr><td>Shipping County FIPS</td><td>FIPS code for shipping address</td></tr>
+                            <tr><td>Shipping Address Details</td><td>Complete shipping verification report</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Reports -->
+                <section id="reports">
+                    <h2>📊 Reports Available</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Report</th><th>Schedule</th><th>What It Shows</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Weekly Report</td><td>Every Monday</td><td>Address verification summary for the week</td></tr>
+                            <tr><td>Monthly Report</td><td>1st of month</td><td>Address verification summary for the month</td></tr>
+                            <tr><td>Selected Report</td><td>Custom Button</td><td>Report for selected records</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Troubleshooting -->
+                <section id="troubleshooting">
+                    <h2>🛠️ Troubleshooting</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Issue</th><th>Solution</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Address Status shows "Not Checked"</td><td>Run the workflow or click the Verify Address button</td></tr>
+                            <tr><td>County not found</td><td>Address may be outside US or coordinates missing</td></tr>
+                            <tr><td>"No response from API"</td><td>Check API key configuration</td></tr>
+                            <tr><td>Latitude/Longitude not updating</td><td>Fields may be named differently; detection handles this</td></tr>
+                            <tr><td>Related List not showing</td><td>Add it to the Layout in Setup</td></tr>
+                            <tr><td>Button not working</td><td>Ensure function is saved and button is configured</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- FAQs -->
+                <section id="faqs">
+                    <h2>❓ FAQs</h2>
+                    <div class="faq">
+                        <h4>Does this work with non-US addresses?</h4>
+                        <p>No, this extension is specifically designed for US addresses only.</p>
+                    </div>
+                    <div class="faq">
+                        <h4>Do I need to configure field mapping?</h4>
+                        <p>No, the extension automatically detects your CRM's address fields.</p>
+                    </div>
+                    <div class="faq">
+                        <h4>Can I verify addresses manually?</h4>
+                        <p>Yes, use the "Verify Address" button on any record.</p>
+                    </div>
+                    <div class="faq">
+                        <h4>Can I verify both Billing and Shipping addresses?</h4>
+                        <p>Yes, for Accounts, both Billing and Shipping addresses are verified separately.</p>
+                    </div>
+                    <div class="faq">
+                        <h4>How do I run reports?</h4>
+                        <p>Weekly and Monthly reports run automatically on schedule. You can also run a Selected Report from the list view.</p>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>📍 US Address Verify</h4>
+                <p>Automated address validation for Zoho CRM. Built by Hrp Dev.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="guide.html">Guide</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="mailto:polas.habib@zohomail.com">polas.habib@zohomail.com</a>
+                <p>Response within 24 hours</p>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="https://marketplace.zoho.com/app/preview/crm/us-address-verify-for-zoho-crm" target="_blank">Zoho Marketplace</a>
+                <a href="https://polashrp.github.io/hrpdev/" target="_blank">Hrp Dev</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Hrp Dev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
